@@ -1,6 +1,8 @@
-# GradientTransitionDemo
+# Gradient Transition Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+
+The purpose of this demo is to try to animate background color change to gradient-background-colored elements. Transition animation is not possible to backround gradient colors, so I've tried to "fake-animate" it to look appealing to the user.
 
 ## Development server
 
