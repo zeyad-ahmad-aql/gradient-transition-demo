@@ -1,48 +1,34 @@
 .wrapper {
   background: white;
+
   position: relative;
 
-  .msg-p {
-    font-weight: bold;
-    margin-bottom: 2.75rem;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
 
-    @media (max-width: 701px) {
-      margin-bottom: 3rem;
-    }
+  #rating-message-row {
+    .msg-p {
+      margin-bottom: 0;
+      font-weight: bold;
 
-    span::after {
-      content: ". ";
-    }
-    span:last-child::after {
-      content: ".";
+      @media (max-width: 255px) {
+        font-weight: normal;
+      }
     }
   }
 
-  .rating-row {
+  .rating-stars-row {
     display: flex;
     justify-content: center;
+
     text-align: center;
+
     position: absolute;
-    top: calc((2.75rem / 2) + 0.625rem);
     right: 0;
     left: 0;
+
     direction: ltr;
-
-    @media (max-width: 701px) {
-      top: calc((3rem / 2) + 2rem);
-    }
-
-    @media (max-width: 414px) {
-      top: calc((3rem / 2) + 3.25rem);
-    }
-
-    @media (max-width: 287px) {
-      top: calc((3rem / 2) + 5rem);
-    }
-
-    .fa-2_5x {
-      font-size: 2.5em;
-    }
 
     .fa-star {
       cursor: pointer;
@@ -60,6 +46,26 @@
       transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
       // transition: all 0.35s ease-in-out;
       will-change: opacity, visibility;
+
+      @media (min-width: 355px) {
+        font-size: 2.5em;
+      }
+
+      @media (max-width: 354px) {
+        font-size: 2em;
+      }
+
+      @media (max-width: 306px) {
+        font-size: 1.5em;
+      }
+
+      @media (max-width: 256px) {
+        font-size: 1em;
+      }
+
+      @media (max-width: 207px) {
+        font-size: 0.75em;
+      }
     }
 
     .fa-star.selected {

@@ -1,13 +1,16 @@
-<div class="wrapper pb-3">
-  <div class="row mx-0 justify-content-center text-center">
+<div class="wrapper pb-2">
+  <div
+    id="rating-message-row"
+    class="row mx-0 justify-content-center text-center"
+  >
     <p class="h5 msg-p">{{ data.msg }}</p>
   </div>
 
   <!-- Filled Stars -->
-  <div class="rating-row">
+  <div class="rating-stars-row">
     <i
       *ngFor="let num of numbers"
-      class="fas fa-star fa-2_5x px-1 selected"
+      class="fas fa-star px-1 selected"
       [ngClass]="{
         show: (num <= ratingVal && !hoveredVal) || num <= hoveredVal
       }"
@@ -17,10 +20,10 @@
     ></i>
   </div>
   <!-- Empty Stars -->
-  <div class="rating-row">
+  <div class="rating-stars-row">
     <i
       *ngFor="let num of numbers"
-      class="far fa-star fa-2_5x px-1"
+      class="far fa-star px-1"
       [ngClass]="{ show: num > ratingVal || num > hoveredVal }"
       (click)="ratingVal = num"
       (mouseenter)="hoveredVal = num"
